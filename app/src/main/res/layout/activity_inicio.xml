@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioActivity">
+
+      <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="1165dp"
+        android:layout_height="526dp"
+        app:srcCompat="@drawable/initdragonspin"
+        tools:layout_editor_absoluteX="-159dp"
+        tools:layout_editor_absoluteY="-48dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:text="TextView"
+        android:textColor="#29E614"
+        android:textSize="34sp"
+        android:layout_marginLeft="120dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="348dp"
+        tools:text="Tu nombre:" />
+
+    <EditText
+        android:id="@+id/playname"
+        android:layout_width="261dp"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toRightOf="@+id/textView"
+        android:textColor="#29E614"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="314dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="165dp"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="6dp"
+        android:layout_toRightOf="@+id/playname"
+        android:text="PLAY !!"
+        tools:layout_editor_absoluteX="590dp"
+        tools:layout_editor_absoluteY="341dp" />
+
+
+
+</RelativeLayout>
