@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
 
     ImageView btn_up,btn_down;
     ImageViewScrolling image,image2,image3;
-    TextView txt_score;
+    TextView txt_score,txt_player;
+
 
     int count_done=0;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
         setContentView(R.layout.activity_main);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        saludoJugador();
         btn_down = (ImageView) findViewById(R.id.btn_down);
         btn_up = (ImageView) findViewById(R.id.btn_up);
 
@@ -64,6 +67,12 @@ public class MainActivity extends AppCompatActivity implements IEventEnd {
         });
     }
 
+    public  void saludoJugador(){
+        Bundle extras = getIntent().getExtras();
+        String dato = extras.getString("nomPlayer");
+        txt_player =(TextView) findViewById(R.id.txt_player);
+        txt_player.setText("Hola " + dato);
+    }
     @Override
     public void eventEnd(int result, int count) {
         if(count_done<2)

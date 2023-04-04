@@ -1,58 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/frontspin"
     tools:context=".InicioActivity">
 
-      <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="1165dp"
-        android:layout_height="526dp"
-        app:srcCompat="@drawable/initdragonspin"
-        tools:layout_editor_absoluteX="-159dp"
-        tools:layout_editor_absoluteY="-48dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="181dp"
+        android:id="@+id/msgTuNombre"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="13dp"
-        android:text="TextView"
-        android:textColor="#29E614"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Tu Nombre: "
         android:textSize="34sp"
-        android:layout_marginLeft="120dp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="348dp"
-        tools:text="Tu nombre:" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edtxNombre"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/playname"
-        android:layout_width="261dp"
-        android:layout_height="54dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginBottom="12dp"
-        android:layout_toRightOf="@+id/textView"
-        android:textColor="#29E614"
+        android:id="@+id/edtxNombre"
+        android:layout_width="270dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/cbnombrebg"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:textSize="34sp"
-        tools:layout_editor_absoluteX="314dp"
-        tools:layout_editor_absoluteY="350dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/msgTuNombre" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="165dp"
-        android:layout_height="63dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="6dp"
-        android:layout_toRightOf="@+id/playname"
+        android:id="@+id/btnPlay"
+        android:layout_width="181dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="366dp"
+        android:layout_marginEnd="367dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="PlayGame"
         android:text="PLAY !!"
-        tools:layout_editor_absoluteX="590dp"
-        tools:layout_editor_absoluteY="341dp" />
-
-
-
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
